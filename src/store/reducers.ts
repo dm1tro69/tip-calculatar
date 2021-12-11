@@ -18,7 +18,7 @@ export const rootReducer = (state = initialState, action: ActionsType): StoreSta
        return { ...state, percentage: Number(action.payload) };
      case ActionTypes.SplitDecrement:
        const split = state.split - 1
-       return { ...state, split: split > 1 ? split: state.split };
+       return { ...state, split: split >= 1 ? split: state.split };
      case ActionTypes.Reset:
        return initialState
      default:

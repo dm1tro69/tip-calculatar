@@ -11,3 +11,5 @@ export interface StoreState {
 }
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware()));
+
+export type RootType = ReturnType<typeof rootReducer>
